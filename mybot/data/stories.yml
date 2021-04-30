@@ -1,0 +1,166 @@
+version: "2.0"
+stories:
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+- story: bye
+  steps:
+  - intent: bye
+  - action: utter_goodbye
+- story: thankyou
+  steps:
+  - intent: thankyou
+  - action: utter_noworries
+- story: sorry
+  steps:
+  - intent: sorry
+  - action: utter_sorry
+- story: chuc_nang
+  steps:
+  - intent: chuc_nang
+  - action: utter_chuc_nang
+- story: dia_chi_spkt
+  steps:
+  - intent: dia_chi_spkt
+  - action: utter_dia_chi_spkt
+- story: co_so_vat_chat
+  steps:
+  - intent: co_so_vat_chat
+  - action: utter_co_so_vat_chat
+- story: chi_tieu_tuyen_sinh
+  steps:
+  - intent: chi_tieu_tuyen_sinh
+  - action: utter_chi_tieu_tuyen_sinh
+- story: so_luong_nganh_dai_tra
+  steps:
+  - intent: so_luong_nganh_dai_tra
+  - action: utter_so_luong_nganh_dai_tra
+  - intent: liet_ke_cac_nganh_he_dai_tra
+  - action: utter_liet_ke_cac_nganh_he_dai_tra
+- story: so_luong_nganh_he_clc_ta
+  steps:
+  - intent: so_luong_nganh_he_clc_ta
+  - action: utter_so_luong_nganh_he_clc_ta
+  - intent: liet_ke_cac_nganh_he_clc_ta
+  - action: utter_liet_ke_cac_nganh_he_clc_ta
+- story: so_luong_nganh_he_clc_tv
+  steps:
+  - intent: so_luong_nganh_he_clc_tv
+  - action: utter_so_luong_nganh_he_clc_tv
+  - intent: liet_ke_cac_nganh_he_clc_tv
+  - action: utter_liet_ke_cac_nganh_he_clc_tv
+- story: so_luong_nganh_he_clc_v_n
+  steps:
+  - intent: so_luong_nganh_he_clc_v_n
+  - action: utter_so_luong_nganh_he_clc_v_n
+  - intent: liet_ke_cac_nganh_he_clc_v_n
+  - action: utter_liet_ke_cac_nganh_he_clc_v_n
+- story: so_luong_nganh_he_sp
+  steps:
+  - intent: so_luong_nganh_he_sp
+  - action: utter_so_luong_nganh_he_sp
+- story: ct_dao_tao_lk_quoc_te
+  steps:
+  - intent: ct_dao_tao_lk_quoc_te
+  - action: utter_ct_dao_tao_lk_quoc_te
+  - intent: so_luong_nganh_ct_dao_tao_lk_quoc_te
+  - action: utter_so_luong_nganh_ct_dao_tao_lk_quoc_te
+- story: so_luong_khoa
+  steps:
+  - intent: so_luong_khoa
+  - action: utter_so_luong_khoa
+- story: liet_ke_ten_khoa
+  steps:
+  - intent: liet_ke_ten_khoa
+  - action: utter_liet_ke_ten_khoa
+- story: co_hoi_viec_lam
+  steps:
+  - intent: co_hoi_viec_lam
+  - action: utter_co_hoi_viec_lam
+- story: so_luong_nganh_khoacntt
+  steps:
+  - intent: so_luong_nganh_khoacntt
+  - action: utter_so_luong_nganh_khoacntt
+- story: ky_nang_sv_cntt_ktdl
+  steps:
+  - intent: ky_nang_sv_cntt_ktdl
+  - action: utter_ky_nang_sv_cntt_ktdl
+- story:  mon_hoc_cntt_ktdl
+  steps:
+  - intent: mon_hoc_cntt_ktdl
+  - action:  utter_mon_hoc_cntt_ktdl
+- story: viec_lam_cntt
+  steps:
+  - intent: viec_lam_cntt
+  - action: utter_viec_lam_cntt
+- story: chuan_dau_ra_cntt
+  steps:
+  - intent: chuan_dau_ra_cntt
+  - action: utter_chuan_dau_ra_cntt
+- story: thoi_gian_ra_truong
+  steps:
+  - intent: thoi_gian_ra_truong
+  - action: utter_thoi_gian_ra_truong
+- story: dk_khi_ra_truong_sv_dap_ung
+  steps:
+  - intent: dk_khi_ra_truong_sv_dap_ung
+  - action: utter_dk_khi_ra_truong_sv_dap_ung
+- story: nganh_ktdl_lm_gi
+  steps:
+  - intent: nganh_ktdl_lm_gi
+  - action: utter_nganh_ktdl_lm_gi
+- story: bao_luu
+  steps:
+  - intent: bao_luu
+  - action: utter_bao_luu
+- story: hoc_phi
+  steps:
+  - intent: hoc_phi
+  - action: utter_hoc_phi
+- story: mien_giam_hoc_phi
+  steps:
+  - intent: mien_giam_hoc_phi
+  - action: utter_mien_giam_hoc_phi
+- story: khoan_thu_khac
+  steps:
+  - intent: khoan_thu_khac
+  - action: utter_khoan_thu_khac
+- story: thu_tuc_nhap_hoc
+  steps:
+  - intent: thu_tuc_nhap_hoc
+  - action: utter_thu_tuc_nhap_hoc
+- story: doi_ngu_giang_vien
+  steps:
+  - intent: doi_ngu_giang_vien
+  - action: utter_doi_ngu_giang_vien
+- story: thong_tin_truong
+  steps:
+  - intent: thong_tin_truong
+  - action: utter_thong_tin_truong
+- story: gioi_thieu_chung
+  steps:
+  - intent: gioi_thieu_chung
+  - action: utter_gioi_thieu_chung
+- story: recomend_by_score
+  steps:
+  - intent: recomend_by_score
+  - action: action_recomend_by_score
+- story: to_hop_mon
+  steps:
+  - intent: to_hop_mon
+  - action: utter_to_hop_mon
+- story: pt_xet_tuyen
+  steps:
+  - intent: pt_xet_tuyen
+  - action: utter_pt_xet_tuyen
+- story: nganh_cnkt_dien_dien_tu
+  steps:
+  - intent: nganh_cnkt_dien_dien_tu
+  - action: utter_nganh_cnkt_dien_dien_tu
+- story: nganh_cnkt_dientu_vienthong
+  steps:
+  - intent: nganh_cnkt_dientu_vienthong
+  - action: utter_nganh_cnkt_dientu_vienthong
+
+

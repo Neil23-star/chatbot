@@ -1,0 +1,371 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 30
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- bye:
+    use_entities: true
+- thankyou:
+    use_entities: true
+- chuc_nang:
+    use_entities: true
+- dia_chi_spkt:
+    use_entities: true
+- co_so_vat_chat:
+    use_entities: true
+- chi_tieu_tuyen_sinh:
+    use_entities: true
+- so_luong_nganh_khoacntt:
+    use_entities: true
+- ky_nang_sv_cntt_ktdl:
+    use_entities: true
+- so_luong_nganh_dai_tra:
+    use_entities: true
+- liet_ke_cac_nganh_he_dai_tra:
+    use_entities: true
+- so_luong_nganh_he_clc_ta:
+    use_entities: true
+- liet_ke_cac_nganh_he_clc_ta:
+    use_entities: true
+- so_luong_nganh_he_clc_tv:
+    use_entities: true
+- liet_ke_cac_nganh_he_clc_tv:
+    use_entities: true
+- so_luong_nganh_he_clc_v_n:
+    use_entities: true
+- liet_ke_cac_nganh_he_clc_v_n:
+    use_entities: true
+- so_luong_nganh_he_sp:
+    use_entities: true
+- ct_dao_tao_lk_quoc_te:
+    use_entities: true
+- so_luong_nganh_ct_dao_tao_lk_quoc_te:
+    use_entities: true
+- mon_hoc_cntt_ktdl:
+    use_entities: true
+- so_luong_khoa:
+    use_entities: true
+- diem_cntt_2020:
+    use_entities: true
+- viec_lam_cntt:
+    use_entities: true
+- co_hoi_viec_lam:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- sorry:
+    use_entities: true
+- liet_ke_ten_khoa:
+    use_entities: true
+- chuan_dau_ra_cntt:
+    use_entities: true
+- thoi_gian_ra_truong:
+    use_entities: true
+- dk_khi_ra_truong_sv_dap_ung:
+    use_entities: true
+- nganh_ktdl_lm_gi:
+    use_entities: true
+- bao_luu:
+    use_entities: true
+- hoc_phi:
+    use_entities: true
+- mien_giam_hoc_phi:
+    use_entities: true
+- khoan_thu_khac:
+    use_entities: true
+- thu_tuc_nhap_hoc:
+    use_entities: true
+- doi_ngu_giang_vien:
+    use_entities: true
+- thong_tin_truong:
+    use_entities: true
+- gioi_thieu_chung:
+    use_entities: true
+- to_hop_mon:
+    use_entities: true
+- pt_xet_tuyen:
+    use_entities: true
+- nganh_cnkt_dien_dien_tu:
+    use_entities: true
+- nganh_cnkt_dientu_vienthong:
+    use_entities: true
+- recomend_by_score:
+    use_entities: true
+entities:
+- ten_truong
+- nganh_cntt
+- chi_tieu
+- diem_cntt
+- dia_chi
+- nam
+- csvc
+- thoi_gian
+- nganh_ktdl
+- gv
+- thong_tin_chung
+- score
+- number
+- dai_tra
+- clc_v_n
+- clc_ta
+- clc_tv
+- sp
+- lk_quoc_te
+- to_hop_mon
+- cnkt_dien_dien_tu
+- cnkt_dientu_vienthong
+- score_txt
+- hoc_ba
+slots: {}
+responses:
+  utter_greet:
+  - text: |-
+      Em chào anh (chị) ạ.<br>
+      Em là chatbot được thiết kế để giúp anh chị trả lời về thông tin tuyển sinh của HCMUTE ạ !
+  utter_goodbye:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: Hẹn gặp lại anh (chị) ạ.
+  utter_sorry:
+  - image: https://img2.thuthuatphanmem.vn/uploads/2018/12/12/anh-xin-loi-dep_095941213.jpg
+    text: Em xin lỗi vì em chưa đủ thông minh ạ.
+  utter_noworries:
+  - text: |-
+      Em luôn sẵn lòng giúp đỡ anh(chị) bất cứ lúc nào. <br>
+      Cảm ơn anh(chị) đã khen ạ.
+  utter_chuc_nang:
+  - text: Em có thể trò chuyện với anh(chị), và trả lời một số câu hỏi liên quan đến thông tin tuyển sinh.
+  utter_unkown:
+  - text: Em xin lỗi, em chưa hiểu ý muốn của anh(chị) ạ. Anh chị có thể nói lại được không ạ.
+  utter_dia_chi_spkt:
+  - image: https://diendantuyensinh24h.com/uploads/photos/shares/Dai-hoc-Ho-Chi-minh/dai-hoc-su-pham-ky-thuat-tp.hcm.jpg
+    text: Số 01 Võ Văn Ngân, Phường Linh Chiểu, Quận Thủ Đức, Thành phố Hồ Chí Minh.
+  utter_co_so_vat_chat:
+  - text: |-
+      Trường tọa lạc trên khuôn viên rộng hơn 22 ha. Với một cơ ngơi bề thế gồm:<br>
+      • Gần 200 phòng học lý thuyết<br>
+      • 60 phòng học chuyên dùng<br>
+      • 16 phòng học máy tính<br>
+      • 58 phòng thí nghiệm<br>
+      • 98 xưởng thực hành hiện đại<br>
+      • Thư viện rộng 1.700 m2 với 34.110 đầu sách, 431.936 bản sách<br>
+      • Khu  ký túc xá với những cơ sở dịch vụ tiện lợi sức chứa 3.000 chỗ.
+  utter_chi_tieu_tuyen_sinh:
+  - text: Tổng chỉ tiêu tuyển sinh năm 2021 của trường là 6420
+  utter_so_luong_nganh_dai_tra:
+  - text: |-
+      Trường đại học Sư Phạm Kỹ Thuật TP HCM có 41 ngành thuộc hệ đại trà.<br>
+      Cụ thể, bạn cần mình tư vấn ngành nào ạ.
+  utter_liet_ke_cac_nganh_he_dai_tra:
+  - text: |-
+      Gồm 41 ngành như sau:<br>
+      • Công nghệ kỹ thuật điện, điện tử; Công nghệ chế tạo máy; Công nghệ kỹ thuật cơ điện tử; Công nghệ kỹ thuật công trình xây dựng; Công nghệ kỹ thuật ô tô; Công nghệ kỹ thuật cơ khí; Công nghệ kỹ thuật nhiệt; Công nghệ in; Công nghệ thông tin;<br>
+      • Công nghệ may; Công nghệ kỹ thuật điện tử - viễn thông; Kỹ thuật xây dựng công trình giao thông; Công nghệ kỹ thuật máy tính; Công nghệ kỹ thuật điều khiển và tự động hóa; Quản lý công nghiệp; Kế toán; Thương mại điện tử; Kỹ thuật công nghiệp;<br>
+      • Kỹ thuật Y sinh (Điện tử Y sinh); Công nghệ Vật liệu; Logistic & Quản lý chuỗi cung ứng; Công nghệ kỹ thuật môi trường; Công nghệ thực phẩm; Công nghệ kỹ thuật hoá học; Thiết kế thời trang; Ngôn ngữ Anh; Kỹ nghệ gỗ và nội thất;<br>
+      • Kỹ thuật dữ liệu; Thiết kế đồ họa; Kiến trúc; Quản lý xây dựng; Năng lượng tái tạo; Quản trị nhà hàng và dịch vụ ăn uống;  Robot và trí tuệ nhân tạo; Hệ thống KT công trình Xây dựng; Kinh doanh Quốc tế; Kiến trúc nội thất; Hệ thống nhúng và IoT.<br>
+  utter_so_luong_nganh_he_clc_ta:
+  - text: |-
+      Trường đại học Sư Phạm Kỹ Thuật TP HCM có 13 ngành thuộc hệ chất lượng cao tiếng Anh.<br>
+      Cụ thể, bạn cần mình tư vấn ngành nào ạ.
+  utter_liet_ke_cac_nganh_he_clc_ta:
+  - text: |-
+      Gồm 13 ngành như sau:<br>
+      • Công nghệ kỹ thuật điện, điện tử; Công nghệ chế tạo máy; Công nghệ kỹ thuật cơ điện tử; Công nghệ kỹ thuật công trình xây dựng; <br>
+      • Công nghệ kỹ thuật ô tô; Công nghệ kỹ thuật cơ khí; Công nghệ thông tin; Công nghệ kỹ thuật điện tử, truyền thông; <br>
+      • Công nghệ kỹ thuật điều khiển và tự động hóa; Công nghệ thực phẩm; CNKT Nhiệt và CNKT Máy tính, Quản lý công nghiệp. <br>
+  utter_so_luong_nganh_he_clc_tv:
+  - text: |-
+      Trường đại học Sư Phạm Kỹ Thuật TP HCM có 20 ngành thuộc hệ chất lượng cao tiếng Việt.<br>
+      Cụ thể, bạn cần mình tư vấn ngành nào ạ.
+  utter_liet_ke_cac_nganh_he_clc_tv:
+  - text: |-
+      Gồm 20 ngành như sau:<br>
+      • Công nghệ kỹ thuật điện, điện tử; Công nghệ chế tạo máy; Công nghệ kỹ thuật cơ điện tử; Công nghệ kỹ thuật công trình xây dựng;<br>
+      • Công nghệ kỹ thuật ô tô; Công nghệ kỹ thuật cơ khí; Công nghệ kỹ thuật nhiệt; Công nghệ in; Công nghệ thông tin; Công nghệ may;<br>
+      • Công nghệ kỹ thuật điện tử, truyền thông; Công nghệ kỹ thuật máy tính; Công nghệ kỹ thuật điều khiển và tự động hóa; Kế toán;<br>
+      • Quản lý công nghiệp; Công nghệ kỹ thuật môi trường; Công nghệ thực phẩm, Thiết kế thời trang; Công nghệ kỹ thuật hóa học; Thương mại điện tử.<br>
+  utter_so_luong_nganh_he_clc_v_n:
+  - text: |-
+      Trường đại học Sư Phạm Kỹ Thuật TP HCM có 2 ngành thuộc hệ chất lượng cao Việt-Nhật.<br>
+      Cụ thể, bạn cần mình tư vấn ngành nào ạ.
+  utter_liet_ke_cac_nganh_he_clc_v_n:
+  - text: |-
+      Gồm 2 ngành như sau:<br>
+      • Công nghệ chế tạo máy (CLC Việt – Nhật);<br>
+      • Công nghệ kỹ thuật điện tử - viễn thông (CLC Việt – Nhật).<br>
+  utter_so_luong_nganh_he_sp:
+  - text: |-
+      Trường đại học Sư Phạm Kỹ Thuật TP HCM có 1 ngành thuộc hệ Sư phạm.<br>
+      Cụ thể, đó là ngành Sư phạm tiếng Anh.
+  utter_ct_dao_tao_lk_quoc_te:
+  - text: |-
+      Trường đại học Sư Phạm Kỹ Thuật TP HCM có liên kết với các trường Đại học như sau:<br>
+      • ĐH Sunderland (Anh)<br>
+      • ĐH Middlesex (Anh)<br>
+      • ĐH Northampton (Anh)<br>
+      • ĐH Tongmyong (Hàn Quốc)<br>
+      • ĐH Kettering (Mỹ)<br>
+  utter_so_luong_nganh_ct_dao_tao_lk_quoc_te:
+  - text: |-
+      Gồm 14 ngành như sau:<br>
+      • Quản trị kinh doanh; Kỹ thuật Điện – Điện Tử;  Kỹ thuật Xây dựng; CN Thông tin; Kế toán & Quản trị tài chính; Kỹ thuật cơ điện tử; Kỹ thuật cơ khí; Quản trị marketing;<br>
+      • Kỹ thuật máy tính; Kỹ thuật chế tạo máy và công nghiệp; Kế toán quốc tế; Tài chính ngân hàng; Quản lý nhà hàng-khách sạn; Logistics và tài chính thương mại.<br>
+  utter_so_luong_khoa:
+  - text: Trường có tổng cộng 14 khoa và 17 phòng ban chức năng, 16 viện, trường trực thuộc & trung tâm nghiên cứu đào tạo chuyển giao công nghệ.
+  utter_liet_ke_ten_khoa:
+  - text: |-
+      • Khoa Lý luận Chính trị<br>
+      • Khoa Khoa học ứng dụng<br>
+      • Khoa Cơ khí Chế tạo máy<br>
+      • Khoa Điện - Điện tử<br>
+      • Khoa Cơ khí Động lực<br>
+      • Khoa Kinh Tế<br>
+      • Khoa Công nghệ thông tin<br>
+      • Khoa In và Truyền thông<br>
+      • Khoa Công nghệ May và Thời Trang<br>
+      • Khoa Công nghệ Hóa học và Thực phẩm<br>
+      • Khoa Xây dựng<br>
+      • Khoa Đào tạo Chất Lượng cao<br>
+      • Viện Sư phạm Kỹ thuật.
+  utter_co_hoi_viec_lam:
+  - text: Hơn 95% sinh viên chưa ra trường đã có việc làm.
+  utter_so_luong_nganh_khoacntt:
+  - text: |-
+      Khoa Công nghê thông tin có 2 ngành:<br>
+      - Ngành Kỹ thuật dữ liệu.<br>
+      - Ngành Công nghệ thông tin. Trong đó có 3 chuyên ngành nhỏ đó là: Công nghệ phần mềm, Hệ thống thông tin, Mạng máy tính.
+  utter_ky_nang_sv_cntt_ktdl:
+  - text: |-
+      Sinh viên Sư phạm Kỹ thuật sẽ được trang bị đầy đủ các kiến thức chuyên môn vững chắc.<br>
+      Có khả năng phân tích đề xuất và hiện thực các giải pháp để giải quyết các vấn đề, có kỹ năng giao tiếp và làm việc nhóm hiệu quả.
+  utter_mon_hoc_cntt_ktdl:
+  - text: |-
+      Sinh viên sẽ được học các môn cơ sở ngành như: Cấu trúc dữ liệu và giải thuật, lập trình hướng đối tượng, công nghệ phần mềm, mạng máy tính, cơ sở dữ liệu... <br>
+      Bạn có thể xem thêm tại đây: http://fit.hcmute.edu.vn/
+  utter_viec_lam_cntt:
+  - text: Sinh viên sau khi ra trường có thể làm ở các công ty phần mềm, các công ty cung cấp giải pháp mạng, các công ty cung cấp giải pháp hệ thống thông tin trong nước cũng như quốc tế.
+  utter_chuan_dau_ra_cntt:
+  - text: chưa có câu trả lời
+  utter_thoi_gian_ra_truong:
+  - text: |-
+      Đối với hệ kĩ sư là 4 năm.<br>
+      Đối với hệ sư phạm là 4.5 năm
+  utter_dk_khi_ra_truong_sv_dap_ung:
+  - text: Sinh viên đạt đủ 150 tc và các chứng chỉ khác.
+  utter_nganh_ktdl_lm_gi:
+  - text: Sinh viên sẽ được làm việc cho các công ty dữ liệu lớn, chuyên ngành Data Engineering(DE), Data Analysis(DA).
+  utter_bao_luu:
+  - text: |-
+      HSSV hoàn tất các xác nhận theo thứ tự yêu cầu được ghi trong đơn.<br>
+      HSSV xin tạm dừng phải hoàn tất học phí trước khi nộp đơn.
+  utter_hoc_phi:
+  - text: |-
+      Mức học phí của Trường Đại học Sư phạm Kỹ thuật TP.HCM năm học 2021 - 2022 có tăng nhẹ so với năm ngoái, cụ thể như sau:<br>
+      • Đại học Hệ đại trà: 18.500.000 - 20.500.000 VNĐ/ năm.<br>
+      • Chất lượng cao Tiếng Việt: 29.000.000 - 31.000.000 VNĐ/năm.<br>
+      • Chất lượng cao Tiếng Anh: 33.000.000 VNĐ/năm.<br>
+      • Chất lượng cao Việt – Nhật: 33.000.000 VNĐ/năm.<br>
+      • Ngành Sư phạm tiếng Anh: miễn học phí.
+  utter_mien_giam_hoc_phi:
+  - image: https://raw.githubusercontent.com/Neil23-star/image_for_chatbot/master/mien_giam_hoc_phi.png
+    text: |-
+      Miễn giảm 100% học phí với các sinh viên có hoàn cảnh đặc biệt khó khăn, mồ côi.<br>
+      Các ngành (*) giảm 50% học phí cho nữ, các ngành (**) giảm 25% học phí cho nữ học kỳ 1 năm học đầu tiên. Các học kỳ tiếp theo căn cứ vào kết quả học tập để xét giảm học phí.
+  utter_khoan_thu_khac:
+  - text: |-
+      Các khoản thu khác bao gồm:<br>
+      • Bảo hiểm y tế.<br>
+      • Bảo hiểm thân thể.<br>
+      • Tiền đoàn phí.
+  utter_thu_tuc_nhap_hoc:
+  - text: Chưa có câu trả lời
+  utter_doi_ngu_giang_vien:
+  - text: |-
+      Có tổng cộng hơn 800 người trong đó đội ngũ giảng viên hơn 650, số có trình độ trên đại học chiếm 76%, hơn 100 giảng viên đang học cao học và nghiên cứu sinh trong và ngoài nước, Trong đó:<br>
+      • 420 Giảng viên.<br>
+      • 195 Tiến sĩ.<br>
+      • 30 Phó giáo sư.<br>
+      • 3 Giáo sư.
+  utter_thong_tin_truong:
+  - text: |-
+      Thông tin liên lạc:<br>
+      • Điện thoại: (028) 37222 764.<br>
+      • Email: ptchc@hcmute.edu.vn.<br>
+      • Website: http://hcmute.edu.vn/<br>
+      • Fanpage: https://www.facebook.com/SV.SPKT
+  utter_gioi_thieu_chung:
+  - text: |-
+      Trường Đại học Sư phạm Kỹ thuật TP. Hồ Chí Minh là trường Đại học công lập trực thuộc Bộ Giáo dục và Đào tạo,  nằm ở cửa ngõ phía bắc Tp. Hồ Chí Minh, ngay cạnh xa lộ Hà Nội đi các tỉnh miền Đông, miền Trung và miền Bắc. Trường cách trung tâm thành phố khoảng 12 km, phương tiện đi lại rất thuận tiện.<br> <br>
+      Do lịch sử để lại, trường tập hợp được lợi thế của nhiều nền giáo dục hiện đại, tiên tiến trên thế giới. Năm 1962 trường được Mỹ xây dựng, năm 1984 hợp nhất với trường TH Việt-Đức do CHLB Đức xây dựng, năm 1991 sáp nhập trường SPKT5 do Liên Xô xây dựng, năm 1998 Trung tâm đào tạo nghề Việt Nam-Hàn Quốc chuyển giao cho trường.
+  utter_to_hop_mon:
+  - image: https://raw.githubusercontent.com/Neil23-star/image_for_chatbot/master/to_hop_mon.png
+    text: Bạn có thể tham khảo các tổ hợp môn dưới bản này nhé.
+  utter_pt_xet_tuyen:
+  - text: |-
+      •	Xét tuyển dựa vào kết quả kỳ thi Trung học phổ thông (THPT) năm 2021.<br>
+      • Xét tuyển dựa vào điểm trung bình học bạ THPT trong 5 học kỳ (trừ học kỳ 2 lớp 12) của từng môn theo tổ hợp từ 7.0 trở lên (xét vào học hệ chất lượng cao).<br>
+      •	Xét tuyển kết hợp kết quả kỳ thi THPT năm 2021 và tổ chức thi riêng đối với 4 ngành: Thiết kế thời trang, Thiết kế đồ họa, Kiến trúc, Kiến trúc nội thất.
+  utter_nganh_cnkt_dien_dien_tu:
+  - text: |-
+      Ngành Công nghệ kỹ thuật điện, điện tử:<br>
+      • Hệ đại trà: 7510301D - Điểm năm 2020: 25.4 điểm - Chỉ tiêu năm 2021 : 180<br>
+      • Hệ CLC tiếng Việt: 7510301C - Điểm năm 2020: 23.5 điểm - Chỉ tiêu năm 2021: 180<br>
+      • Hệ CLC tiếng Anh: 7510301A - Điểm năm 2020: 21 điểm - Chỉ tiêu năm 2021: 60<br>
+      • Tổ hợp xét tuyển: A00, A01, D01, D90
+  utter_nganh_cnkt_dientu_vienthong:
+  - text: |-
+      Ngành Công nghệ kỹ thuật điện tử - viễn thông:<br>
+      • Hệ đại trà: 7510302D - Điểm năm 2020: 24.8 điểm - Chỉ tiêu năm 2021 : 120<br>
+      • Hệ CLC (tiếng Việt): 7510302C - Điểm năm 2020: 22 điểm - Chỉ tiêu năm 2021: 120<br>
+      • Hệ CLC (tiếng Anh): 7510302A - Điểm năm 2020: 20 điểm - Chỉ tiêu năm 2021: 30<br>
+      • Hệ CLC (Việt-Nhật): 7510302N - Điểm năm 2020: 21 điểm - Chỉ tiêu năm 2021:<br>
+      • Tổ hợp xét tuyển: A00, A01, D01, D90
+actions:
+- utter_greet
+- utter_goodbye
+- utter_sorry
+- utter_noworries
+- utter_chuc_nang
+- utter_co_so_vat_chat
+- utter_dia_chi_spkt
+- utter_chi_tieu_tuyen_sinh
+- utter_so_luong_nganh_dai_tra
+- utter_liet_ke_cac_nganh_he_dai_tra
+- utter_so_luong_nganh_he_clc_ta
+- utter_liet_ke_cac_nganh_he_clc_ta
+- utter_so_luong_nganh_he_clc_tv
+- utter_liet_ke_cac_nganh_he_clc_tv
+- utter_so_luong_nganh_he_clc_v_n
+- utter_liet_ke_cac_nganh_he_clc_v_n
+- utter_so_luong_nganh_he_sp
+- utter_ct_dao_tao_lk_quoc_te
+- utter_so_luong_nganh_ct_dao_tao_lk_quoc_te
+- utter_so_luong_khoa
+- utter_liet_ke_ten_khoa
+- utter_so_luong_nganh_khoacntt
+- utter_ky_nang_sv_cntt_ktdl
+- utter_mon_hoc_cntt_ktdl
+- utter_viec_lam_cntt
+- utter_unkown
+- utter_chuan_dau_ra_cntt
+- utter_thoi_gian_ra_truong
+- utter_dk_khi_ra_truong_sv_dap_ung
+- utter_nganh_ktdl_lm_gi
+- utter_bao_luu
+- utter_hoc_phi
+- utter_mien_giam_hoc_phi
+- utter_khoan_thu_khac
+- utter_thu_tuc_nhap_hoc
+- utter doi_ngu_giang_vien
+- utter_thong_tin_truong
+- utter_gioi_thieu_chung
+- action_recomend_by_score
+- utter_to_hop_mon
+- utter_pt_xet_tuyen
+- utter_nganh_cnkt_dien_dien_tu
+- utter_nganh_cnkt_dientu_vienthong
+forms: {}
+e2e_actions: []

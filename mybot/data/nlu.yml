@@ -1,0 +1,618 @@
+version: "2.0"
+nlu:
+#intent_greet
+- intent: greet
+  examples: |
+    - xin chao
+    - hello
+    - hi
+    - em oi
+    - bot oi
+    - ban cho minh hoi chut
+    - ban oi
+    - chao bot
+    - anh oi
+#intent_bye
+- intent: bye
+  examples: |
+    - xin chao tam biet
+    - hen gap lai
+    - goodbye see you again
+    - bye
+    - bai bay
+    - bay bay
+#intent_thankyou
+- intent: thankyou
+  examples: |
+    - thanks
+    - good job
+    - thank you so much
+    - great! Thanks
+    - cam on
+    - gioi qua
+    - great
+    - awsome
+    - tot lam
+    - gioi the
+    - gioi qua
+    - thong minh
+    - lam tot lam
+    - lm tot lam
+#intent_sorry
+- intent: sorry
+  examples: |
+    - te qua
+    - do qua
+    - khong hieu
+    - ngoc
+    - chang hieu
+    - khong thong minh
+#intent_chuc_nang
+- intent: chuc_nang
+  examples: |
+    - bot lm dc nhung gi
+    - bot co the lam duoc gi
+    - bot co the lm duoc gi
+    - bot co chuc nang gi
+    - bot co the lam duoc nhung gi
+#intent_co_so_vat_chat
+- intent: co_so_vat_chat
+  examples: |
+    - [co so vat chat](csvc) cua truong
+    - [csvc](csvc) cua truong
+    - [co so vat chat](csvc) cua nha truong nhu the nao
+    - [co so vat chat](csvc) cua nha truong ntn
+    - [co so vat chat](csvc) cua nha truong ra sao
+    - [csvc](csvc) cua nha truong nhu the nao
+    - [csvc](csvc) cua nha truong ntn
+    - [csvc](csvc) vat chat cua nha truong ra sao
+#intent_chi_tieu_tuyen_sinh
+- intent: chi_tieu_tuyen_sinh
+  examples: |
+    - chi tieu tuyen sinh nam 2021 la bao nhieu sinh vien
+    - 2021 nha truong tuyen bao nhieu sinh vien
+    - so luong sinh vien tuyen sinh nam 2021
+#intent_so_luong_nganh_dai_tra
+- intent: so_luong_nganh_dai_tra
+  examples: |
+    - truong co bao nhieu nganh he [dai tra](dai_tra)
+    - so luong nganh he [dai tra](dai_tra) cua truong
+    - so luong nganh he [dai tra](dai_tra) cua truong la bao nhieu
+    - he [dai tra](dai_tra) o truong co bao nhieu nganh
+    - he [dai tra](dai_tra) gom bao nhieu nganh
+#intent_liet_ke_cac_nganh_he_dai_tra
+- intent: liet_ke_cac_nganh_he_dai_tra
+  examples: |
+    - he [dai tra](dai_tra) gom nhung nganh nao
+    - he [dai tra](dai_tra) co nhung nganh nao
+    - ten cac nganh thuoc he [dai tra](dai_tra)
+#intent_so_luong_nganh_he_clc_ta
+- intent: so_luong_nganh_he_clc_ta
+  examples: |
+    - truong co bao nhieu nganh he [clc ta](clc_ta)
+    - so luong nganh he [clc ta](clc_ta) cua truong
+    - so luong nganh he [clc ta](clc_ta) cua truong la bao nhieu
+    - he [clc ta](clc_ta) o truong co bao nhieu nganh
+    - truong co bao nhieu nganh he [chat luong cao tieng anh](clc_ta)
+    - so luong nganh he [chat luong cao tieng anh](clc_ta) cua truong
+    - he [chat luong cao tieng anh](clc_ta) o truong co bao nhieu nganh
+    - he [clc ta](clc_ta) gom bao nhieu nganh
+    - he [chat luong cao tieng anh](clc_ta) gom bao nhieu nganh
+#intent_liet_ke_cac_nganh_he_clc_ta
+- intent: liet_ke_cac_nganh_he_clc_ta
+  examples: |
+    - he [clc ta](clc_ta) gom nhung nganh nao
+    - ten cac nganh thuoc he [clc ta](clc_ta)
+    - he [chat luong cao tieng anh](clc_ta) gom nhung nganh nao
+    - ten cac nganh thuoc he [chat luong cao tieng anh](clc_ta)
+#intent_so_luong_nganh_he_clc_tv
+- intent: so_luong_nganh_he_clc_tv
+  examples: |
+    - truong co bao nhieu nganh he [clc tv](clc_tv)
+    - so luong nganh he [clc tv](clc_tv) cua truong
+    - so luong nganh he [clc ta](clc_ta) cua truong la bao nhieu
+    - he [clc tv](clc_tv) o truong co bao nhieu nganh
+    - truong co bao nhieu nganh he [chat luong cao tieng viet](clc_tv)
+    - so luong nganh he [chat luong cao tieng viet](clc_tv) cua truong
+    - he [chat luong cao tieng viet](clc_tv) o truong co bao nhieu nganh
+    - he [clc tv](clc_tv) gom bao nhieu nganh
+    - he [chat luong cao tieng viet](clc_tv) gom bao nhieu nganh
+#intent_liet_ke_cac_nganh_he_clc_tv
+- intent: liet_ke_cac_nganh_he_clc_tv
+  examples: |
+    - he [clc tv](clc_tv) gom nhung nganh nao
+    - he [clc tv](clc_tv) co nhung nganh nao
+    - ten cac nganh thuoc he [clc tv](clc_tv)
+    - he [chat luong cao tieng viet](clc_tv) gom nhung nganh nao
+    - he [chat luong cao tieng viet](clc_tv) co nhung nganh nao
+    - ten cac nganh thuoc he [chat luong cao tieng viet](clc_tv)
+#intent_so_luong_nganh_he_clc_v_n
+- intent: so_luong_nganh_he_clc_v_n
+  examples: |
+    - truong co bao nhieu nganh he [chat luong cao viet nhat](clc_v_n)
+    - so luong nganh he [chat luong cao viet nhat](clc_v_n) cua truong
+    - so luong nganh he [chat luong cao viet nhat](clc_v_n) cua truong la bao nhieu
+    - he [chat luong cao viet nhat](clc_v_n) o truong co bao nhieu nganh
+    - he [chat luong cao viet nhat](clc_v_n) gom bao nhieu nganh
+#intent_liet_ke_cac_nganh_he_clc_v_n
+- intent: liet_ke_cac_nganh_he_clc_v_n
+  examples: |
+    - he [chat luong cao viet nhat](clc_v_n) gom nhung nganh nao
+    - he [chat luong cao viet nhat](clc_v_n) co nhung nganh nao
+    - ten cac nganh thuoc he [chat luong cao viet nhat](clc_v_n)
+#intent_so_luong_nganh_he_sp
+- intent: so_luong_nganh_he_sp
+  examples: |
+    - truong co bao nhieu nganh he [sp](sp)
+    - so luong nganh he [sp](sp) cua truong
+    - so luong nganh he [sp](sp) cua truong la bao nhieu
+    - he [sp](sp) o truong co bao nhieu nganh
+    - he [sp](sp) gom nhung nganh nao
+    - ten cac nganh thuoc he [sp](sp)
+    - truong co bao nhieu nganh he [su pham](sp)
+    - so luong nganh he [su pham](sp) cua truong
+    - he [su pham](sp) o truong co bao nhieu nganh
+    - he [su pham](sp) gom nhung nganh nao
+    - ten cac nganh thuoc he [su pham](sp)
+    - truong co dao tao he [sp](sp) khong
+    - truong co dao tao he [su pham](sp) khong
+    - he [sp](sp) gom bao nhieu nganh
+    - he [su pham](sp) gom bao nhieu nganh
+#intent_ct_dao_tao_lk_quoc_te
+- intent: ct_dao_tao_lk_quoc_te
+  examples: |
+    - truong co [chuong trinh dao tao lien ket quoc te](lk_quoc_te) khong
+    - truong [lien ket voi cac truong dai hoc](lk_quoc_te) nao
+    - truong [lien ket voi cac truong dh](lk_quoc_te) nao
+    - truong [lk voi cac truong dh](lk_quoc_te) nao
+    - truong co [ct dao tao lk quoc te](lk_quoc_te) khong
+#intent_so_luong_nganh_ct_dao_tao_lk_quoc_te
+- intent: so_luong_nganh_ct_dao_tao_lk_quoc_te
+  examples: |
+    - [chuong trinh dao tao lien ket quoc te](lk_quoc_te) gom nhung nganh nao
+    - ten cac nganh thuoc [chuong trinh dao tao lien ket quoc te](lk_quoc_te)
+    - [ct dao tao lk quoc te](lk_quoc_te) gom nhung nganh nao
+    - ten cac nganh thuoc [ct dao tao lk quoc te](lk_quoc_te)
+#intent_so_luong_khoa
+- intent: so_luong_khoa
+  examples: |
+    - truong [dhspkt](ten_truong) co bao nhieu khoa
+    - truong [dai hoc su pham ky thuat tp hcm](ten_truong) co bao nhieu khoa
+    - truong [dai hoc su pham ky thuat thanh pho ho chi minh](ten_truong) co bao nhieu khoa
+    - truong [hcmute](ten_truong) co bao nhieu khoa
+    - truong co bao nhieu khoa
+    - so luong cac khoa cua truong la bao nhieu
+    - so luong cac khoa cua truong [dhspkt](ten_truong) la bao nhieu
+    - so luong cac khoa cua truong [dai hoc su pham ky thuat tp hcm](ten_truong) la bao nhieu
+    - so luong cac khoa cua truong [dai hoc su pham ky thuat thanh pho ho chi minh](ten_truong) la bao nhieu
+    - so luong cac khoa cua truong [hcmute](ten_truong) la bao nhieu
+#intent_liet_ke_ten_khoa
+- intent: liet_ke_ten_khoa
+  examples: |
+    - truong gom nhung khoa nao
+    - liet ke ten cac khoa cua truong
+    - liet ke cac khoa cua truong
+    - do la nhung khoa nao
+    - cac khoa do ten gi
+#intent_co_hoi_viec_lam
+- intent: co_hoi_viec_lam
+  examples: |
+    - co hoi viec lam sau khi ra truong
+    - co hoi viec lm sau khi ra truong
+    - ty le sinh vien co viec lam sau khi ra truong
+    - ty le sinh vien co viec lm sau khi ra truong
+    - ty le sinh vien ra truong co viec lam la bao nhieu
+    - ty le sinh vien ra truong co viec lm la bao nhieu
+#intent_so_luong_nganh_khoacntt
+- intent: so_luong_nganh_khoacntt
+  examples: |
+    - khoa [cong nghe thong tin](nganh_cntt) gom bao nhieu nganh
+    - khoa [cntt](nganh_cntt) gom bao nhieu nganh
+    - khoa [it](nganh_cntt) gom bao nhieu nganh
+    - khoa [cong nghe thong tin](nganh_cntt) gom bao nhung nganh nao
+    - khoa [cntt](nganh_cntt) gom bao nhung nganh nao
+    - khoa [it](nganh_cntt) gom bao nhung nganh nao
+    - nganh [cong nghe thong tin](nganh_cntt) co bao nhieu chuyen nganh
+    - nganh [cntt](nganh_cntt) co bao nhieu chuyen nganh
+    - nganh [it](nganh_cntt) co bao nhieu chuyen nganh
+#intent_ky_nang_sv_cntt_ktdl
+- intent: ky_nang_sv_cntt_ktdl
+  examples: |
+    - sinh vien nganh [cong nghe thong tin](nganh_cntt) se duoc trang nhung bi ky nang gi
+    - sinh vien nganh [cntt](nganh_cntt) se duoc trang nhung bi ky nang gi
+    - sinh vien nganh [it](nganh_cntt) se duoc trang bi nhung ky nang gi
+    - sinh vien nganh [cong nghe thong tin](nganh_cntt) se hoc duoc gi
+    - sinh vien nganh [cntt](nganh_cntt) se hoc duoc gi
+    - sinh vien nganh [it](nganh_cntt) se hoc duoc gi
+    - sinh vien nganh [ky thuat du lieu](nganh_ktdl) se duoc trang nhung bi ky nang gi
+    - sinh vien nganh [ktdl](nganh_ktdl) se duoc trang nhung bi ky nang gi
+    - sinh vien nganh [ky thuat du lieu](nganh_ktdl) se hoc duoc gi
+    - sinh vien nganh [ktdl](nganh_ktdl) se hoc duoc gi
+#intent_mon_hoc_cntt_ktdl
+- intent: mon_hoc_cntt_ktdl
+  examples: |
+    - nganh [cong nghe thong tin](nganh_cntt) hoc nhung mon gi
+    - nganh [cntt](nganh_cntt) hoc nhung mon gi
+    - nganh [it](nganh_cntt) hoc nhung mon gi
+    - nganh [ky thuat du lieu](nganh_ktdl) hoc nhung mon gi
+    - nganh [ktdl](nganh_ktdl) hoc nhung mon gi
+    - nganh [cong nghe thong tin](nganh_cntt) hoc mon nao
+    - nganh [cntt](nganh_cntt) hoc mon nao
+    - nganh [it](nganh_cntt) hoc mon nao
+    - nganh [ky thuat du lieu](nganh_ktdl) hoc mon nao
+    - nganh [ktdl(nganh_ktdl) hoc mon nao
+#intent_nganh_ktdl_lm_gi
+- intent: nganh_ktdl_lm_gi
+  examples: |
+    - hoc nganh [ktdl](nganh_ktdl) xong nua ra truong lam gi
+    - hoc nganh [ky thuat du lieu](nganh_ktdl) xong nua ra truong lam gi
+    - hoc nganh [ky thuat du lieu](nganh_ktdl) xong thi co viec lam gi
+    - hoc nganh [ktdl](nganh_ktdl) xong thi co viec lam gi
+    - co hoi viec lam nganh [ky thuat du lieu](nganh_ktdl) sau khi hoc xong
+    - co hoi viec lam nganh [ktdl](nganh_ktdl) sau khi hoc xong
+    - co hoi viec lam nganh [ky thuat du lieu](nganh_ktdl) sau khi ra truong
+    - co hoi viec lam nganh [ktdl](nganh_ktdl) sau khi ra truong
+#intent_viec_lam_cntt
+- intent: viec_lam_cntt
+  examples: |
+    - hoc nganh [cong nghe thong tin](nganh_cntt) xong ra truong lam gi
+    - hoc nganh [cntt](nganh_cntt) xong ra truong lam gi
+    - hoc nganh [it](nganh_cntt) xong ra truong lam gi
+    - hoc nganh [cong nghe thong tin](nganh_cntt) xong thi co viec lam gi
+    - hoc nganh [cntt](nganh_cntt) xong thi co viec lam gi
+    - hoc nganh [it](nganh_cntt) xong thi co viec lam gi
+    - viec lam nganh [cong nghe thong tin](nganh_cntt) sau khi hoc xong
+    - viec lam nganh [cntt](nganh_cntt) sau khi hoc xong
+    - viec lam nganh [it](nganh_cntt) sau khi hoc xong
+    - viec lam nganh [cong nghe thong tin](nganh_cntt) sau khi ra truong
+    - viec lam nganh [cntt](nganh_cntt) sau khi ra truong
+    - viec lam nganh [it](nganh_cntt) sau khi ra truong
+#intent_dia_chi_spkt
+- intent: dia_chi_spkt
+  examples: |
+    - truong [nam o đau](dia_chi)
+    - truong [nam o quan nao](dia_chi)
+    - truong [nam tren đuong nao](dia_chi)
+    - [dia chi](dia_chi) truong
+    - truong [dhspkt](ten_truong) [nam o đau](dia_chi)
+    - truong [dhspkt](ten_truong) [nam o quan nao](dia_chi)
+    - truong [dhspkt](ten_truong) [nam tren đuong nao](dia_chi)
+    - [dia chi](dia_chi) truong [dhspkt](ten_truong)
+    - truong [dai hoc su pham ky thuat tp hcm](ten_truong) [nam o đau](dia_chi)
+    - truong [dai hoc su pham ky thuat tp hcm](ten_truong) [nam o quan nao](dia_chi)
+    - truong [dai hoc su pham ky thuat tp hcm](ten_truong) [nam tren đuong nao](dia_chi)
+    - [dia chi](dia_chi) truong [dai hoc su pham ky thuat tp hcm](ten_truong)
+    - truong [dai hoc su pham ky thuat thanh pho ho chi minh](ten_truong) [nam o đau](dia_chi)
+    - truong [dai hoc su pham ky thuat thanh pho ho chi minh](ten_truong) [nam o quan nao](dia_chi)
+    - truong [dai hoc su pham ky thuat thanh pho ho chi minh](ten_truong) [nam tren đuong nao](dia_chi)
+    - [dia chi](dia_chi) truong [dai hoc su pham ky thuat thanh pho ho chi minh](ten_truong)
+    - truong [hcmute](ten_truong) [nam o đau](dia_chi)
+    - truong [hcmute](ten_truong) [nam o quan nao](dia_chi)
+    - truong [hcmute](ten_truong) [nam tren đuong nao](dia_chi)
+    - [dia chi](dia_chi) truong [hcmute](ten_truong)
+#intent_chuan_dau_ra_cntt
+- intent: chuan_dau_ra_cntt
+  examples: |
+    - chuan dau ra nganh [cong nghe thong tin](nganh_cntt)
+    - chuan dau ra nganh [cntt](nganh_cntt)
+    - chuan dau ra nganh [it](nganh_cntt)
+#intent_thoi_gian_ra_truong
+- intent: thoi_gian_ra_truong
+  examples: |
+    - [bao lau](thoi_gian) hoc xong [cong nghe thong tin](nganh_cntt)
+    - [thoi gian](thoi_gian) hoc xong [cong nghe thong tin](nganh_cntt)
+    - [may nam](thoi_gian) hoc xong [cong nghe thong tin](nganh_cntt)
+    - [bao lau](thoi_gian) hoc xong [cntt](nganh_cntt)
+    - [thoi gian](thoi_gian) hoc xong [cntt](nganh_cntt)
+    - [may nam](thoi_gian) hoc xong [cntt](nganh_cntt)
+    - [bao lau](thoi_gian) hoc xong [it](nganh_cntt)
+    - [thoi gian](thoi_gian) hoc xong [it](nganh_cntt)
+    - [may nam](thoi_gian) hoc xong [it](nganh_cntt)
+    - [it](nganh_cntt) hoc trong [may nam](thoi_gian)
+    - [it](nganh_cntt) hoc trong [bao lau](thoi_gian)
+    - [cntt](nganh_cntt) hoc trong [may nam](thoi_gian)
+    - [cntt](nganh_cntt) hoc trong [bao lau](thoi_gian)
+    - [cong nghe thong tin](nganh_cntt) hoc trong [may nam](thoi_gian)
+    - [cong nghe thong tin](nganh_cntt) hoc trong [bao lau](thoi_gian)
+    - hoc xong thi [bao lau](thoi_gian) ra truong
+    - [thoi gian](thoi_gian) ra truong
+    - [bao lau](thoi_gian) thi ra truong
+    - hoc [may nam](thoi_gian) thi ra truong
+#intent_dk_khi_ra_truong_sv_dap_ung
+- intent: dk_khi_ra_truong_sv_dap_ung
+  examples: |
+    - dieu kien khi sinh vien tot nghiep can phai dap ung
+    - dieu kien khi sinh viên tot nghiep can phai co
+    - dieu kien khi sinh vien sau khi tot nghiep can phai dap ung
+#intent_bao_luu
+- intent: bao_luu
+  examples: |
+    - truong [dhspkt](ten_truong) co bao luu khong
+    - truong [dai hoc su pham ky thuat tp hcm](ten_truong) co bao luu khong
+    - truong [dai hoc su pham ky thuat thanh pho ho chi minh](ten_truong) co bao luu khong
+    - truong [hcmute](ten_truong) co bao luu khong
+    - truong co bao luu khong
+    - thu tuc bao luu gom nhung gi
+    - dieu kien de bao luu la gi
+#intent_hoc_phi
+- intent: hoc_phi
+  examples: |
+    - hoc phi truong [dhspkt](ten_truong) la bao nhieu
+    - hoc phi truong [dai hoc su pham ky thuat tp hcm](ten_truong) la bao nhieu
+    - hoc phi truong [dai hoc su pham ky thuat thanh pho ho chi minh](ten_truong) la bao nhieu
+    - hoc phi truong [hcmute](ten_truong) la bao nhieu
+    - hoc phi truong la bao nhieu
+#intent_mien_giam_hoc_phi
+- intent: mien_giam_hoc_phi
+  examples: |
+    - chinh sach mien giam hoc phi
+    - truong co mien giam hoc phi khong
+    - truong dhspkt](ten_truong) co mien giam hoc phi khong
+    - truong [dai hoc su pham ky thuat tp hcm](ten_truong) co mien giam hoc phi khong
+    - truong [dai hoc su pham ky thuat thanh pho ho chi minh](ten_truong) co mien giam hoc phi khong
+    - mien giam hoc phi nhu the nao
+    - mien giam hoc phi ntn
+    - mien giam hoc phi ra sao
+    - mien giam hoc phi ra s
+#intent_khoan_thu_khac
+- intent: khoan_thu_khac
+  examples: |
+    - truong co cac khoan thu nao ngoai hoc phi khong
+    - cac khoan thu khac cua truong gom nhung gi
+    - cac khoan thu khac cua truong la gi
+#intent_thu_tuc_nhap_hoc
+- intent: thu_tuc_nhap_hoc
+  examples: |
+    - thu tuc nhap hoc gom nhung gi
+    - thu tuc nhap hoc can nhung gi
+    - thu tuc nhap hoc ntn
+    - thu tuc nhap hoc nhu the nao
+#intent_doi_ngu_giang_vien
+- intent: doi_ngu_giang_vien
+  examples: |
+    - doi ngu giang vien cua truong
+    - truong co bao nhieu [giang vien](gv)
+    - so luong [giang vien](gv) cua truong
+    - truong co bao nhieu [gv](gv)
+    - so luong [gv](gv) cua truong
+    - truong co bao nhieu [thac si](gv)
+    - so luong [thac si](gv) cua truong
+    - truong co bao nhieu [ths](gv)
+    - so luong [ths](gv) cua truong
+    - truong co bao nhieu [tien si](gv)
+    - so luong [tien si](gv) cua truong
+    - truong co bao nhieu [ts](gv)
+    - so luong [ts](gv) cua truong
+    - truong co bao nhieu [giao su](gv)
+    - so luong [giao su](gv) cua truong
+    - truong co bao nhieu [gs](gv)
+    - so luong [gs](gv) cua truong
+    - truong co bao nhieu [pgs](gv)
+    - so luong [pgs](gv) cua truong
+    - truong co bao nhieu [pho giao su](gv)
+    - so luong [pho giao su](gv) cua truong
+#intent_thong_tin_truong
+- intent: thong_tin_truong
+  examples: |
+    - so dien thoai cua truong
+    - sdt cua truong
+    - email cua truong
+    - website cua truong
+    - Fanpage cua truong
+    - thong tin lien lac cua truong
+    - thong tin lien he cua truong
+    - fb cua truong
+    - facebook cua truong
+# intent_gioi_thieu_chung
+- intent: gioi_thieu_chung
+  examples: |
+    - [gioi thieu](thong_tin_chung) ve truong
+    - [thong tin](thong_tin_chung) ve truong
+    - [lich su hinh thanh](thong_tin_chung) ve truong
+    - [thong tin](thong_tin_chung) cua truong
+    - [lich su hinh thanh](thong_tin_chung) cua truong
+    - [tong quan](thong_tin_chung) ve truong
+    - [gioi thieu](thong_tin_chung) ve truong [dhspkt](ten_truong)
+    - [thong tin](thong_tin_chung) ve truong [dhspkt](ten_truong)
+    - [lich su hinh thanh](thong_tin_chung) ve truong [dhspkt](ten_truong)
+    - [thong tin](thong_tin_chung) cua truong [dhspkt](ten_truong)
+    - [lich su hinh thanh](thong_tin_chung) cua truong [dhspkt](ten_truong)
+    - [tong quan](thong_tin_chung) ve truong [dhspkt](ten_truong)
+    - [gioi thieu](thong_tin_chung) ve truong [dai hoc su pham ky thuat tp hcm](ten_truong)
+    - [thong tin](thong_tin_chung) ve truong [dai hoc su pham ky thuat tp hcm](ten_truong)
+    - [lich su hinh thanh](thong_tin_chung) ve truong [dai hoc su pham ky thuat tp hcm](ten_truong)
+    - [thong tin](thong_tin_chung) cua truong [dai hoc su pham ky thuat tp hcm](ten_truong)
+    - [lich su hinh thanh](thong_tin_chung) cua truong [dai hoc su pham ky thuat tp hcm](ten_truong)
+    - [tong quan](thong_tin_chung) ve truong [dai hoc su pham ky thuat tp hcm](ten_truong)
+    - [gioi thieu](thong_tin_chung) ve truong [dai hoc su pham ky thuat thanh pho ho chi minh](ten_truong)
+    - [thong tin](thong_tin_chung) ve truong [dai hoc su pham ky thuat thanh pho ho chi minh](ten_truong)
+    - [lich su hinh thanh](thong_tin_chung) ve truong [dai hoc su pham ky thuat thanh pho ho chi minh](ten_truong)
+    - [thong tin](thong_tin_chung) cua truong [dai hoc su pham ky thuat thanh pho ho chi minh](ten_truong)
+    - [lich su hinh thanh](thong_tin_chung) cua truong [dai hoc su pham ky thuat thanh pho ho chi minh](ten_truong)
+    - [tong quan](thong_tin_chung) ve truong [dai hoc su pham ky thuat thanh pho ho chi minh](ten_truong)
+    - [gioi thieu](thong_tin_chung) ve truong [hcmute](ten_truong)
+    - [thong tin](thong_tin_chung) ve truong [hcmute](ten_truong)
+    - [lich su hinh thanh](thong_tin_chung) ve truong [hcmute](ten_truong)
+    - [thong tin](thong_tin_chung) cua truong [hcmute](ten_truong)
+    - [lich su hinh thanh](thong_tin_chung) cua truong [hcmute](ten_truong)
+    - [tong quan](thong_tin_chung) ve truong [hcmute](ten_truong)
+# intent to hop mon
+- intent: to_hop_mon
+  examples: |
+    - khoi [a00](to_hop_mon) gom nhung mon nao
+    - nhung mon nao thuoc khoi [a00](to_hop_mon)
+    - khoi [a01](to_hop_mon) gom nhung mon nao
+    - nhung mon nao thuoc khoi [a01](to_hop_mon)
+    - khoi [b00](to_hop_mon) gom nhung mon nao
+    - nhung mon nao thuoc khoi [b00](to_hop_mon)
+    - khoi [c00](to_hop_mon) gom nhung mon nao
+    - nhung mon nao thuoc khoi [c00](to_hop_mon)
+    - khoi [d01](to_hop_mon) gom nhung mon nao
+    - nhung mon nao thuoc khoi [d01](to_hop_mon)
+    - khoi [d07](to_hop_mon) gom nhung mon nao
+    - nhung mon nao thuoc khoi [d07](to_hop_mon)
+    - khoi [d14](to_hop_mon) gom nhung mon nao
+    - nhung mon nao thuoc khoi [d14](to_hop_mon)
+    - khoi [d15](to_hop_mon) gom nhung mon nao
+    - nhung mon nao thuoc khoi [d15](to_hop_mon)
+    - khoi [d90](to_hop_mon) gom nhung mon nao
+    - nhung mon nao thuoc khoi [d90](to_hop_mon)
+    - khoi [d96](to_hop_mon) gom nhung mon nao
+    - nhung mon nao thuoc khoi [d96](to_hop_mon)
+    - khoi [v01](to_hop_mon) gom nhung mon nao
+    - nhung mon nao thuoc khoi [v01](to_hop_mon)
+    - khoi [v02](to_hop_mon) gom nhung mon nao
+    - nhung mon nao thuoc khoi [v02](to_hop_mon)
+    - khoi [v03](to_hop_mon) gom nhung mon nao
+    - nhung mon nao thuoc khoi [v03](to_hop_mon)
+    - khoi [v04](to_hop_mon) gom nhung mon nao
+    - nhung mon nao thuoc khoi [v04](to_hop_mon)
+    - khoi [v05](to_hop_mon) gom nhung mon nao
+    - nhung mon nao thuoc khoi [v05](to_hop_mon)
+    - khoi [v06](to_hop_mon) gom nhung mon nao
+    - nhung mon nao thuoc khoi [v06](to_hop_mon)
+    - khoi [v07](to_hop_mon) gom nhung mon nao
+    - nhung mon nao thuoc khoi [v07](to_hop_mon)
+    - khoi [v08](to_hop_mon) gom nhung mon nao
+    - nhung mon nao thuoc khoi [v08](to_hop_mon)
+# intent phuong_thuc_xet_tuyen
+- intent: pt_xet_tuyen
+  examples: |
+    - truong co xet diem [hoc ba](hoc_ba) khong
+    - truong co xet diem [hb](hoc_ba) khong
+    - truong co xet [diem thpt](score_txt) khong
+    - truong co xet [diem trung hoc pho thong](score_txt) khong
+    - phuong thuc xet tuyen cua truong thi nhu the nao
+    - phuong thuc xet tuyen cua truong thi ntn
+    - phuong thuc xet tuyen cua ra sao
+    - cac phuong thuc xet tuyen cua truong
+# intent nganh_cnkt_dien_dien_tu
+- intent: nganh_cnkt_dien_dien_tu
+  examples: |
+    - truong co nganh [cnkt dien dien tu](cnkt_dien_dien_tu) khong
+    - truong co nganh [cong nghe ky thuat dien dien tu](cnkt_dien_dien_tu) khong
+    - ma nganh [cnkt dien dien tu](cnkt_dien_dien_tu) la gi
+    - ma nganh [cong nghe ky thuat dien dien tu](cnkt_dien_dien_tu) la gi
+    - to hop mon nganh [cong nghe ky thuat dien dien tu](cnkt_dien_dien_tu) la gi
+    - to hop mon nganh [cnkt dien dien tu](cnkt_dien_dien_tu) la gi
+    - chi tieu nganh [cong nghe ky thuat dien dien tu](cnkt_dien_dien_tu) la bao nhieu
+    - chi tieu nganh [cnkt dien dien tu](cnkt_dien_dien_tu) la bao nhieu
+    - nganh [cnkt dien dien tu](cnkt_dien_dien_tu) xet to hop mon nao
+    - nganh [cong nghe ky thuat dien dien tu](cnkt_dien_dien_tu) xet to hop mon nao
+    - ma nganh [cnkt dien dien tu](cnkt_dien_dien_tu) he [clc ta](clc_ta) la gi
+    - ma nganh [cnkt dien dien tu] he [clc tv](clc_tv) la gi
+    - ma nganh [cnkt dien dien tu] he [dai tra](dai_tra) la gi
+    - chi tieu nganh [cnkt dien dien tu] he [clc ta](clc_ta) bao nhieu
+    - chi tieu nganh [cnkt dien dien tu] he [clc tv](clc_tv) bao nhieu
+    - chi tieu nganh [cnkt dien dien tu] he [dai tra](dai_tra) bao nhieu
+    - ma nganh [cnkt dien dien tu](cnkt_dien_dien_tu) he [chat luong cao tieng anh](clc_ta) la gi
+    - ma nganh [cnkt dien dien tu] he [chat luong cao tieng viet](clc_tv) la gi
+    - chi tieu nganh [cnkt dien dien tu] he [chat luong cao tieng anh](clc_ta) bao nhieu
+    - chi tieu nganh [cnkt dien dien tu] he [chat luong cao tieng viet](clc_tv) bao nhieu
+    - ma nganh [cong nghe ky thuat dien dien tu](cnkt_dien_dien_tu) he [clc ta](clc_ta) la gi
+    - ma nganh [cong nghe ky thuat dien dien tu](cnkt_dien_dien_tu) he [clc tv](clc_tv) la gi
+    - ma nganh [cong nghe ky thuat dien dien tu](cnkt_dien_dien_tu) he [dai tra](dai_tra) la gi
+    - chi tieu nganh [cong nghe ky thuat dien dien tu](cnkt_dien_dien_tu) he [clc ta](clc_ta) bao nhieu
+    - chi tieu nganh [cong nghe ky thuat dien dien tu](cnkt_dien_dien_tu) he [clc tv](clc_tv) bao nhieu
+    - chi tieu nganh [cong nghe ky thuat dien dien tu](cnkt_dien_dien_tu) he [dai tra](dai_tra) bao nhieu
+    - ma nganh [cong nghe ky thuat dien dien tu](cnkt_dien_dien_tu) he [chat luong cao tieng anh](clc_ta) la gi
+    - ma nganh [cong nghe ky thuat dien dien tu](cnkt_dien_dien_tu) he [chat luong cao tieng viet](clc_tv) la gi
+    - chi tieu nganh [cong nghe ky thuat dien dien tu](cnkt_dien_dien_tu) he [chat luong cao tieng anh](clc_ta) bao nhieu
+    - chi tieu nganh [cong nghe ky thuat dien dien tu](cnkt_dien_dien_tu) he [chat luong cao tieng viet](clc_tv) bao nhieu
+# intent_nganh_cnkt_dientu_vienthong
+- intent: nganh_cnkt_dientu_vienthong
+  examples: |
+    - truong co nganh [cnkt dien tu vien thong](cnkt_dientu_vienthong) khong
+    - truong co nganh [cong nghe ky thuat dien tu vien thong](cnkt_dientu_vienthong) khong
+    - ma nganh [cnkt dien tu vien thong](cnkt_dientu_vienthong) la gi
+    - ma nganh [cong nghe ky thuat dien tu vien thong](cnkt_dientu_vienthong) la gi
+    - ma nganh [cnkt dien tu vien thong](cnkt_dientu_vienthong) he [clc ta](clc_ta) la gi
+    - ma nganh [cnkt dien tu vien thong] he [clc tv](clc_tv) la gi
+    - ma nganh [cnkt dien tu vien thong] he [dai tra](dai_tra) la gi
+    - ma nganh [cnkt dien tu vien thong](cnkt_dientu_vienthong) he [chat luong cao tieng anh](clc_ta) la gi
+    - ma nganh [cnkt dien tu vien thong] he [chat luong cao tieng viet](clc_tv) la gi
+    - ma nganh [cong nghe ky thuat dien tu vien thong](cnkt_dientu_vienthong) he [clc ta](clc_ta) la gi
+    - ma nganh [cong nghe ky thuat dien tu vien thong](cnkt_dientu_vienthong) he [clc tv](clc_tv) la gi
+    - ma nganh [cong nghe ky thuat dien tu vien thong](cnkt_dientu_vienthong) he [dai tra](dai_tra) la gi
+    - ma nganh [cong nghe ky thuat dien tu vien thong](cnkt_dientu_vienthong) he [chat luong cao tieng anh](clc_ta) la gi
+    - ma nganh [cong nghe ky thuat dien tu vien thong](cnkt_dientu_vienthong) he [chat luong cao tieng viet](clc_tv) la gi
+    - chi tieu nganh [cong nghe ky thuat dien tu vien thong](cnkt_dientu_vienthong) he [chat luong cao tieng anh](clc_ta) bao nhieu
+    - chi tieu nganh [cong nghe ky thuat dien tu vien thong](cnkt_dientu_vienthong) he [chat luong cao tieng viet](clc_tv) bao nhieu
+    - chi tieu nganh [cong nghe ky thuat dien tu vien thong](cnkt_dientu_vienthong) la bao nhieu
+    - chi tieu nganh [cnkt dien tu vien thong](cnkt_dientu_vienthong) la bao nhieu
+    - chi tieu nganh [cnkt dien tu vien thong] he [clc ta](clc_ta) bao nhieu
+    - chi tieu nganh [cnkt dien tu vien thong] he [clc tv](clc_tv) bao nhieu
+    - chi tieu nganh [cnkt dien tu vien thong] he [dai tra](dai_tra) bao nhieu
+    - chi tieu nganh [cnkt dien tu vien thong] he [chat luong cao tieng anh](clc_ta) bao nhieu
+    - chi tieu nganh [cnkt dien tu vien thong] he [chat luong cao tieng viet](clc_tv) bao nhieu
+    - chi tieu nganh [cong nghe ky thuat dien tu vien thong](cnkt_dientu_vienthong) he [clc ta](clc_ta) bao nhieu
+    - chi tieu nganh [cong nghe ky thuat dien tu vien thong](cnkt_dientu_vienthong) he [clc tv](clc_tv) bao nhieu
+    - chi tieu nganh [cong nghe ky thuat dien tu vien thong](cnkt_dientu_vienthong) he [dai tra](dai_tra) bao nhieu
+    - chi tieu nganh [cong nghe ky thuat dien tu vien thong](cnkt_dientu_vienthong) he [chat luong cao tieng anh](clc_ta) bao nhieu
+    - chi tieu nganh [cong nghe ky thuat dien tu vien thong](cnkt_dientu_vienthong) he [chat luong cao tieng viet](clc_tv) bao nhieu
+    - to hop mon nganh [cong nghe ky thuat dien tu vien thong](cnkt_dientu_vienthong) la gi
+    - to hop mon nganh [cnkt dien tu vien thong](cnkt_dientu_vienthong) la gi
+    - nganh [cnkt dien tu vien thong](cnkt_dientu_vienthong) xet to hop mon nao
+    - nganh [cong nghe ky thuat dien tu vien thong](cnkt_dientu_vienthong) xet to hop mon nao
+#lookup_score_txt
+- lookup: score_txt
+  examples: |
+    - diem
+    - diem thi
+    - diem thi dai hoc
+    - diem xet tuyen
+    - diem ruoi
+    - diem xet tuyen dai hoc
+    - diem thpt
+    - diem trung hoc pho thong
+#lookup_hoc_ba
+- lookup: hoc_ba
+  examples: |
+    - hb
+    - hoc ba
+#intent_recomend_by_score
+- intent: recomend_by_score
+  examples: |
+    - 24 [diem](score_txt) thi do duoc nganh nao
+    - 24 [diem](score_txt) thi dau duoc nganh nao
+    - duoc 25 [diem](score_txt) thi hoc nganh gi
+    - thi duoc 26 [diem](score_txt) thi hoc gi
+    - 29 [diem](score_txt) học cai gi nhi
+    - duoc 30 [diem](score_txt) thi vao hoc gi
+    - thi duoc hai sau [diem](score_txt) thi hoc nganh gi
+    - co muoi ba [diem](score_txt) thi hoc gi duoc
+    - co muoi lam [diem](score_txt) thi hoc gi duoc nhi
+    - 24 [diem thi](score_txt) thi do duoc nganh nao
+    - 24 [diem thi](score_txt) thi dau duoc nganh nao
+    - duoc 25 [diem xet tuyen](score_txt) thi hoc nganh gi
+    - thi duoc 26 [diem thi dai hoc](score_txt) thi hoc gi
+    - 29 [diem thi dai hoc](score_txt) hoc cai gi nhi
+    - duoc 30 [diem thi](score_txt) thi vao hoc gi
+    - thi duoc hai sau [diem xet tuyen](score_txt) thi hoc nganh gi
+    - co muoi ba [diem thi](score_txt) thi hoc gi duoc
+    - có muoi lam [diem thi đại học](score_txt) thi hoc gi duoc nhi
+    - 24 [diem ruoi](score_txt) thi do duoc nganh nao
+    - duoc 25 [diem ruoi](score_txt) thi hoc nganh gi
+    - thi duoc 26 [diem ruoi](score_txt) thi hoc gi
+    - 29 [diem ruoi](score_txt) hoc cai gi nhi
+    - duoc 30 [diem ruoi](score_txt) thi vao hoc gi
+    - thi duoc hai sau [diem ruoi](score_txt) thi hoc nganh gi
+    - có muoi ba [diem ruoi](score_txt) thi học gi duoc
+    - có muoi lam [diem ruoi](score_txt) thi hoc gi duoc nhi
+    - 25 [diem thpt](score_txt) thi do nganh nao
+    - 25 [diem thpt](score_txt) thi dau nganh nao
+    - 25 [diem thpt](score_txt) thi hoc nganh gi
+    - 25 [diem thpt](score_txt) thi hoc gi duoc nhi
+    - 25 [diem trung hoc pho thong](score_txt) thi do nganh nao
+    - 25 [diem trung hoc pho thong](score_txt) thi dau nganh nao
+    - 25 [diem trung hoc pho thong](score_txt) thi hoc nganh gi
+    - 25 [diem trung hoc pho thong](score_txt) thi hoc gi duoc nhi
+    - 27 [diem](score_txt) [hoc ba](hoc_ba) thi do nganh nao
+    - 27 [diem](score_txt) [hoc ba](hoc_ba) thi dau nganh nao
+    - 27 [diem](score_txt) [hb](hoc_ba) thi do nganh nao
+    - 27 [diem](score_txt) [hb](hoc_ba) thi dau nganh nao
+    - 28 [diem](score_txt) thi do nganh nao cua [hoc ba](hoc_ba)
+    - 28 [diem](score_txt) thi dau nganh nao cua [hoc ba](hoc_ba)
+    - 28 [diem](score_txt) thi dau nganh nao cua [hb](hoc_ba)
+    - 28 [diem](score_txt) thi do nganh nao cua [hb](hoc_ba)
+
